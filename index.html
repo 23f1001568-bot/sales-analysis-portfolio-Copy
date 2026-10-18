@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Business analysis portfolio showcasing sales transaction analysis and revenue calculations.">
+  <title>Business Analysis Portfolio | Joseph Solomon</title>
+  <style>
+    :root{--ink:#14213d;--muted:#5d6b82;--accent:#2563eb;--paper:#f5f7fb;--line:#e2e8f0}
+    *{box-sizing:border-box} body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:var(--paper);color:var(--ink);line-height:1.6}
+    header{background:linear-gradient(125deg,#101c3a,#1d4ed8);color:#fff;padding:64px 22px 72px}
+    .wrap{max-width:960px;margin:0 auto}.eyebrow{text-transform:uppercase;letter-spacing:.14em;font-size:.78rem;font-weight:700;opacity:.8}
+    h1{font-size:clamp(2.2rem,6vw,4rem);line-height:1.08;max-width:750px;margin:14px 0}.lead{font-size:1.12rem;max-width:650px;color:#e2eaff}
+    main{padding:28px 22px 64px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px;margin:22px 0}
+    .card{background:white;border:1px solid var(--line);border-radius:18px;padding:24px;box-shadow:0 8px 24px #14213d0a}.label{color:var(--muted);font-size:.9rem}.metric{font-size:2rem;font-weight:800;letter-spacing:-.04em;margin:5px 0}.pill{display:inline-block;background:#eaf1ff;color:#1d4ed8;border-radius:99px;padding:5px 10px;font-size:.8rem;font-weight:700}
+    h2{font-size:1.55rem;margin:36px 0 10px} p{margin-top:8px}.steps{padding-left:20px}.steps li{margin:8px 0}.note{border-left:4px solid var(--accent);padding:12px 16px;background:#edf3ff;border-radius:0 10px 10px 0;color:#243b68}
+    footer{padding:24px 22px;border-top:1px solid var(--line);color:var(--muted);font-size:.92rem}.email{overflow-wrap:anywhere}
+  </style>
+</head>
+<body>
+  <header><div class="wrap">
+    <div class="eyebrow">Analytics · Reporting · Decision support</div>
+    <h1>Turning transaction data into clear business insights.</h1>
+    <p class="lead">A compact portfolio of practical data analysis work, focused on accurate calculations, transparent methodology, and useful business metrics.</p>
+  </div></header>
+  <main class="wrap">
+    <h2>Featured project</h2>
+    <section class="card">
+      <span class="pill">Sales performance · Q1 2025</span>
+      <h2 style="margin-top:14px">Regional revenue analysis</h2>
+      <p>Analyzed transaction-level sales data to calculate revenue for a specific city and month. The calculation filters to Mumbai transactions in February 2025, computes each row's revenue as quantity multiplied by unit price, then sums the matching rows.</p>
+      <div class="grid">
+        <div class="card"><div class="label">Region</div><div class="metric">Mumbai</div><div class="label">City filter</div></div>
+        <div class="card"><div class="label">Reporting period</div><div class="metric">Feb 2025</div><div class="label">Month filter</div></div>
+        <div class="card"><div class="label">Metric</div><div class="metric">Revenue</div><div class="label">SUM(quantity × price)</div></div>
+      </div>
+      <h3>Method</h3>
+      <ol class="steps">
+        <li>Load <code>sales_data.csv</code> and parse the transaction date.</li>
+        <li>Filter rows where city is Mumbai and the date falls in February 2025.</li>
+        <li>Calculate transaction revenue as <code>quantity × price</code>.</li>
+        <li>Sum revenue for all matching transactions and round to the nearest integer.</li>
+      </ol>
+      <p class="note"><strong>Quality check:</strong> The city and month filters must both match. Checking the year as well prevents transactions from other February periods from being included.</p>
+    </section>
+    <h2>Approach</h2>
+    <div class="grid">
+      <article class="card"><h3>Data preparation</h3><p>Inspect column types and normalize date fields before filtering.</p></article>
+      <article class="card"><h3>Metric calculation</h3><p>Use a row-level revenue calculation, then aggregate only the selected transactions.</p></article>
+      <article class="card"><h3>Clear communication</h3><p>State the reporting period, dimensions, formula, and rounding convention alongside each result.</p></article>
+    </div>
+    <h2>Contact</h2>
+    <p class="email"><!--email_off-->23f1001568@ds.study.iitm.ac.in<!--/email_off--></p>
+  </main>
+  <footer><div class="wrap">Business Analysis Portfolio · Built as a static page for GitHub Pages.</div></footer>
+</body>
+</html>
